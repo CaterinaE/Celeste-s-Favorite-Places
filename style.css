@@ -287,14 +287,9 @@ i {
 }
 
 .history-card {
-  flex: 1;
-  min-width: 200px;
+ 
   background: #f1f1f1;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  border: 2px solid transparent;
+   
 }
 
 .history-card:hover {
@@ -402,4 +397,39 @@ body.menu-open {
     padding: 12px 10px;
     font-size: 0.95rem;
   }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px ;
+  background-color: #ff8a00;
+}
+
+/* Default card style */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  flex: 1 1 calc(33.333% - 30px); /* 3 per row */
+  max-width: 350px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+  border: 2px solid transparent;
+}
+
+/* If only 2 cards in a row → make them wider */
+.card-container:has(.card:nth-child(2):last-child) .card {
+  flex: 1 1 calc(50% - 30px);
+  max-width: 500px;
+}
+
+/* If only 1 card → make it take the whole row */
+.card-container:has(.card:only-child) .card {
+  flex: 1 1 100%;
+  max-width: 800px;
 }
