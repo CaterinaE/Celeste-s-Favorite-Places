@@ -1,0 +1,52 @@
+<!-- navbar.html -->
+<header>
+  <div class="header-inner">
+    <h1>🍽️ Celeste's Favorite Places</h1>
+
+    <nav aria-label="Main navigation">
+      <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="foods.html">Foods</a></li>
+        <li><a href="top_rated.html">Top Rated</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile overlay + panel -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<aside class="mobile-panel" id="mobilePanel">
+  <div class="panel-top">
+    <div style="display:flex;gap:10px;align-items:center">
+      <strong style="font-size:1.05rem">Menu</strong>
+      <small style="opacity:0.9">Celeste's</small>
+    </div>
+    <button class="mobile-close" id="mobileCloseBtn"><i class="fas fa-times"></i></button>
+  </div>
+
+  <nav>
+    <ul class="mobile-links">
+      <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="places.html"><i class="fas fa-city"></i> Places</a></li>
+      <li><a href="foods.html"><i class="fas fa-utensils"></i> Foods</a></li>
+      <li><a href="top_rated.html"><i class="fas fa-star"></i> Top Rated</a></li>
+      <li><a href="history.html"><i class="fas fa-landmark"></i> History</a></li>
+      <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <div style="margin-top:auto;">
+    <a href="#" class="open-btn" style="display:inline-block; width:100%; text-align:center;">Plan a Visit</a>
+  </div>
+</aside>

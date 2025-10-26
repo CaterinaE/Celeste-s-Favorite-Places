@@ -7,10 +7,7 @@
   /* width of the slide-in menu on mobile */
 }
 
-/* Reset & base */
-* {
-  box-sizing: border-box
-}
+
 
 body {
   margin: 0;
@@ -432,4 +429,374 @@ body.menu-open {
 .card-container:has(.card:only-child) .card {
   flex: 1 1 100%;
   max-width: 800px;
+}
+
+
+
+ 
+ 
+.paris {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  overflow: hidden;
+  background: linear-gradient(180deg, #757DB4, #F1B1D0 428px, #F1B1D0 428px);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+
+/* grass at bottom */
+.paris::before {
+  content: "";
+  width: 100%;
+  height: 72px;
+  background: #5D923F;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Eiffel base and parts (flattened selectors) */
+.paris .eiffel {
+  width: 4px;
+  height: 25px;
+  background: #403443;
+  position: absolute;
+  left: 2px;
+  right: 0;
+  margin: 0 auto;
+  top: 48px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  z-index: 20;
+}
+
+.paris .eiffel::before {
+  content: "";
+  width: 4px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 13px solid #403443;
+  position: absolute;
+  left: -7px;
+  top: 25px;
+}
+
+.paris .eiffel::after {
+  content: "";
+  width: 19px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 18px solid #403443;
+  position: absolute;
+  top: 38px;
+  left: -12px;
+}
+
+/* top section */
+.paris .eiffel .top {
+  width: 5px;
+  height: 155px;
+  background: #403443;
+  position: absolute;
+  top: 56px;
+  left: -1px;
+}
+
+.paris .eiffel .top::before {
+  content: "";
+  width: 5px;
+  height: 155px;
+  background: #403443;
+  position: absolute;
+  top: 0;
+  transform-origin: top right;
+  transform: rotate(6deg);
+  left: -7px;
+}
+
+.paris .eiffel .top::after {
+  content: "";
+  width: 5px;
+  height: 156px;
+  background: #403443;
+  position: absolute;
+  top: -1px;
+  transform-origin: top right;
+  transform: rotate(-6deg);
+  left: 7px;
+}
+
+/* cross-1 */
+.paris .eiffel .top .cross-1 {
+  width: 5px;
+  position: absolute;
+  transform-origin: top left;
+  height: 34px;
+  background: #403443;
+  transform: rotate(-45deg);
+  top: 36px;
+  left: -10px;
+}
+
+.paris .eiffel .top .cross-1::before {
+  content: "";
+  width: 5px;
+  position: absolute;
+  transform-origin: top left;
+  height: 40px;
+  background: #403443;
+  top: 16px;
+  left: -20px;
+}
+
+.paris .eiffel .top .cross-1::after {
+  content: "";
+  width: 5px;
+  position: absolute;
+  transform-origin: top left;
+  height: 52px;
+  background: #403443;
+  top: 36px;
+  left: -45px;
+}
+
+/* cross-2 */
+.paris .eiffel .top .cross-2 {
+  width: 5px;
+  position: absolute;
+  transform-origin: top left;
+  height: 34px;
+  background: #403443;
+  transform: rotate(45deg);
+  top: 36px;
+  left: 10px;
+}
+
+.paris .eiffel .top .cross-2::before {
+  content: "";
+  width: 5px;
+  position: absolute;
+  transform-origin: top left;
+  height: 40px;
+  background: #403443;
+  top: 16px;
+  left: 20px;
+}
+
+.paris .eiffel .top .cross-2::after {
+  content: "";
+  width: 5px;
+  position: absolute;
+  transform-origin: top left;
+  height: 52px;
+  background: #403443;
+  top: 36px;
+  left: 45px;
+}
+
+/* cross-3 */
+.paris .eiffel .top .cross-3 {
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg);
+  border-bottom: 5px solid #403443;
+  border-right: 5px solid #403443;
+  position: absolute;
+  left: -12px;
+  top: 116px;
+}
+
+.paris .eiffel .top .cross-3::before {
+  content: "";
+  height: 5px;
+  width: 78px;
+  background: #403443;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: -13px;
+  top: 25px;
+}
+
+/* center */
+.paris .eiffel .center {
+  width: 78px;
+  position: absolute;
+  background: #403443;
+  height: 9px;
+  left: -38px;
+  top: 210px;
+}
+
+.paris .eiffel .center::before {
+  content: "";
+  height: 4px;
+  background: #403443;
+  width: 68px;
+  position: absolute;
+  left: 6px;
+  top: 18px;
+  z-index: 2;
+}
+
+.paris .eiffel .center::after {
+  content: "";
+  height: 4px;
+  background: #403443;
+  width: 124px;
+  position: absolute;
+  left: -22px;
+  top: 80px;
+}
+
+.paris .eiffel .center .left {
+  border: 5px solid #403443;
+  width: 20px;
+  height: 82px;
+  top: 8px;
+  left: 6px;
+  position: absolute;
+  transform-origin: top left;
+  transform: skewX(-16deg);
+  border-top: 0;
+  background: #4F3F52;
+}
+
+.paris .eiffel .center .right {
+  border: 5px solid #403443;
+  width: 20px;
+  height: 82px;
+  top: 8px;
+  left: 44px;
+  position: absolute;
+  transform-origin: top left;
+  transform: skewX(16deg);
+  border-top: 0;
+  background: #4F3F52;
+}
+
+.paris .eiffel .center .right::before {
+  content: "";
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  background: #4F3F52;
+  left: -30px;
+}
+
+/* bottom */
+.paris .eiffel .bottom {
+  width: 124px;
+  height: 9px;
+  position: absolute;
+  background: #403443;
+  top: 300px;
+  left: -59px;
+}
+
+.paris .eiffel .bottom::before {
+  content: "";
+  width: 120px;
+  height: 5px;
+  background: #403443;
+  position: absolute;
+  top: 9px;
+  left: 1px;
+}
+
+.paris .eiffel .bottom::after {
+  content: "";
+  width: 126px;
+  height: 5px;
+  background: #403443;
+  position: absolute;
+  top: 19px;
+  left: -2px;
+}
+
+.paris .eiffel .bottom .left {
+  width: 32px;
+  height: 63px;
+  border: 5px solid #403443;
+  position: absolute;
+  transform-origin: top left;
+  transform: skewX(-29deg);
+  left: 0px;
+  background: #4F3F52;
+  top: 12px;
+  border-top: 0;
+}
+
+.paris .eiffel .bottom .right {
+  width: 32px;
+  height: 63px;
+  border: 5px solid #403443;
+  background: #4F3F52;
+  position: absolute;
+  transform-origin: top left;
+  transform: skewX(29deg);
+  left: 80px;
+  top: 12px;
+  border-top: 0;
+}
+ 
+
+/* Sparkle keyframes */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.2;
+    box-shadow: 0 0 5px #fff, 0 0 10px #ffeb3b, 0 0 20px #fff59d;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ffeb3b, 0 0 40px #fff176;
+  }
+}
+
+/* Light-up sparkle effect (applies to tower pieces) */
+.paris.sparkle .eiffel,
+.paris.sparkle .eiffel div,
+.paris.sparkle .eiffel::before,
+.paris.sparkle .eiffel::after {
+  animation: sparkle 0.35s ease-in-out infinite alternate;
+  /* make the tower appear lit */
+  background: linear-gradient(#fff9c4, #fdd835);
+  box-shadow: 0 0 8px #fff9c4, 0 0 18px #ffd54f;
+}
+
+ 
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+ 
+ /* Darken background when sparkling */
+.paris.sparkle {
+  background: linear-gradient(180deg, darkblue, #1a1a40 428px);
+  transition: background 0.5s ease;
+}
+ 
+ 
+/* Add glowing dots (stars) only in the sky area */
+.paris.sparkle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70%; /* only sky, not grass */
+  background-image: radial-gradient(#fff 1px, transparent 1px),
+                    radial-gradient(#fff8b3 1px, transparent 1px);
+  background-size: 80px 80px, 100px 100px; /* fewer stars, spaced farther apart */
+  opacity: 0.5;
+  animation: twinkleStars 2s infinite ease-in-out alternate;
+  pointer-events: none;
+  z-index: 0;
 }
