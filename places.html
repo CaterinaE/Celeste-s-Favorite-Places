@@ -4,113 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Places – Paris</title>
-
-  <!-- Bootstrap -->
- 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/115ec276a5.js" crossorigin="anonymous"></script>
-
-  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Shared Navbar -->
   <div id="navbar"></div>
-
   <main class="container mt-5 text-center">
     <h1>🇫🇷 Paris, France</h1>
     <p class="text-muted mb-4">Click the Eiffel Tower to turn on the lights!</p>
+   </div>
 
-    <!-- Eiffel Tower Icon -->
-    <div class="tower-container position-relative d-inline-block">
-      <i class="fa-solid fa-tower-observation eiffel-icon"></i>
-    </div>
-
-
-
-
-
-
-  </main>
-
-  <footer class="text-center py-4 mt-5">
-    © 2025 Celeste's Travel Journal
-  </footer>
-
+  
+ 
+ 
   <!-- Background overlay (hidden by default) -->
   <div class="night-overlay" id="nightOverlay"></div>
-
-  <script src="navbar.js"></script>
-  <script>
-    // Eiffel Tower click toggle
-    const tower = document.querySelector('.eiffel-icon');
-    const overlay = document.getElementById('nightOverlay');
-
-    tower.addEventListener('click', () => {
-      const isLit = tower.classList.toggle('lit');
-      overlay.classList.toggle('active', isLit);
-    });
-  </script>
-
-  <style>/* Tower icon style */
-    .eiffel-icon {
-      font-size: 6rem;
-      color: #444;
-      cursor: pointer;
-      transition: color 0.4s ease, text-shadow 0.4s ease;
-    }
-    
-    .eiffel-icon:hover {
-      color: #555;
-    }
-    
-    /* Tower lights on (glowing) */
-    .eiffel-icon.lit {
-      color: #fdd835; /* warm light yellow */
-      text-shadow: 
-        0 0 10px #fdd835,
-        0 0 20px #fbc02d,
-        0 0 30px #f9a825;
-    }
-    
-    /* Night overlay */
-    .night-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.5s ease;
-      z-index: 10; /* ensure it’s above content */
-    }
-    
-    .night-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-
-
-
-    
-    </style>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Places — Paris Tower Demo</title>
-  <style>
-
-  </style>
-</head>
-<body>
-
-  <h1 style="text-align:center; margin-top:24px;">Paris — Click the scene to sparkle the tower</h1>
-
+ 
   <!-- Scene (click the circle to trigger sparkle) -->
   <div class="paris" id="parisScene">
     <div class="eiffel">
@@ -133,6 +45,10 @@
     <div class="stars" aria-hidden="true"></div>
   </div>
 
+
+ 
+  <script src="navbar.js"></script>
+ 
   <script>
     // Toggle sparkle for a few seconds, then turn off.
     (function(){
@@ -147,9 +63,15 @@
         paris.classList.add('sparkle');
 
         // auto remove after 5 seconds
-        setTimeout(() => paris.classList.remove('sparkle'), 5000);
+        setTimeout(() => paris.classList.remove('sparkle'), 3000);
       });
     })();
-  </script>
+  </script> 
+  
+  
+  <footer class="text-center py-4 mt-5">
+    © 2025 Celeste's Travel Journal
+  </footer>
+  </main> 
 </body>
 </html>
