@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
   <script src="https://kit.fontawesome.com/115ec276a5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Shared Navbar -->
@@ -15,63 +17,67 @@
   <main class="container mt-5 text-center">
     <h1>🇫🇷 Paris, France</h1>
     <p class="text-muted mb-4">Click the Eiffel Tower to turn on the lights!</p>
-   </div>
-
-  
- 
- 
-  <!-- Background overlay (hidden by default) -->
-  <div class="night-overlay" id="nightOverlay"></div>
- 
-  <!-- Scene (click the circle to trigger sparkle) -->
-  <div class="paris" id="parisScene">
-    <div class="eiffel">
-      <div class="top">
-        <div class="cross-1"></div>
-        <div class="cross-2"></div>
-        <div class="cross-3"></div>
-      </div>
-      <div class="center">
-        <div class="left"></div>
-        <div class="right"></div>
-      </div>
-      <div class="bottom">
-        <div class="left"></div>
-        <div class="right"></div>
-      </div>
     </div>
 
-    <!-- (optional) you had a .stars element earlier — we keep it hidden to avoid duplicates -->
-    <div class="stars" aria-hidden="true"></div>
-  </div>
 
 
- 
-  <script src="navbar.js"></script>
- 
-  <script>
-    // Toggle sparkle for a few seconds, then turn off.
-    (function(){
-      const paris = document.getElementById('parisScene');
 
-      if (!paris) return;
+    <!-- Background overlay (hidden by default) -->
+    <div class="night-overlay" id="nightOverlay"></div>
 
-      paris.addEventListener('click', () => {
-        // if already sparkling, ignore click (or you could restart timer)
-        if (paris.classList.contains('sparkle')) return;
+    <!-- Scene (click the circle to trigger sparkle) -->
+    <div class="paris" id="parisScene">
+      <div class="eiffel">
+        <div class="top">
+          <div class="cross-1"></div>
+          <div class="cross-2"></div>
+          <div class="cross-3"></div>
+        </div>
+        <div class="center">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+        <div class="bottom">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
 
-        paris.classList.add('sparkle');
+      <!-- (optional) you had a .stars element earlier — we keep it hidden to avoid duplicates -->
+      <div class="stars" aria-hidden="true"></div>
+    </div>
 
-        // auto remove after 5 seconds
-        setTimeout(() => paris.classList.remove('sparkle'), 3000);
-      });
-    })();
-  </script> 
-  
-  
-  <footer class="text-center py-4 mt-5">
-    © 2025 Celeste's Travel Journal
-  </footer>
-  </main> 
+
+
+    <script src="navbar.js"></script>
+
+    <script>
+      // Toggle sparkle for a few seconds, then turn off.
+      (function () {
+        const paris = document.getElementById('parisScene');
+
+        if (!paris) return;
+
+        paris.addEventListener('click', () => {
+          // if already sparkling, ignore click (or you could restart timer)
+          if (paris.classList.contains('sparkle')) return;
+
+          paris.classList.add('sparkle');
+
+          // auto remove after 5 seconds
+          setTimeout(() => paris.classList.remove('sparkle'), 3000);
+        });
+      })();
+    </script>
+
+
+
+    <!--need to add an italy area for pisa and milano, need to also do cute drawing for them too, maybe flip the tower of pisa -->
+
+    <footer class="text-center py-4 mt-5">
+      © 2025 Celeste's Travel Journal
+    </footer>
+  </main>
 </body>
+
 </html>
